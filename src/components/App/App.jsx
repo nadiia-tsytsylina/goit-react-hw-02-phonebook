@@ -53,13 +53,10 @@ class App extends Component {
     return (
       <Container>
         <Title>Phonebook</Title>
-        <ContactsForm onSubmit={this.addContact}></ContactsForm>
+        <ContactsForm onSubmit={this.addContact} />
         <SubTitle>Contacts</SubTitle>
-        <Filter value={filter} onChange={this.handleChange}></Filter>
-        <ContactsList
-          contacts={filteredNames}
-          onClick={this.deleteContact}
-        ></ContactsList>
+        <Filter value={filter} onChange={this.handleChange} />
+        <ContactsList contacts={filteredNames} onClick={this.deleteContact} />
       </Container>
     );
   }
